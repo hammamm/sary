@@ -16,7 +16,7 @@ class Model<T: Codable>: Codable{
 }
 
 enum ResponseStatus<T: Codable> {
-    case success(Model<T>)
+    case success(T)
     case failure(String)
 }
 

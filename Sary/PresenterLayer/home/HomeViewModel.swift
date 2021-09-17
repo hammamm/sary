@@ -14,7 +14,9 @@ class HomeViewModel: BaseViewModel {
     let sections = Observable.just([TableSections.banner])
 
     func getData() {
+        loading.onNext(true)
         Banner.getList { response in
+            self.loading.onNext(false)
             switch response{
                 case .success(let object):
                     self.data.onNext(object.result)

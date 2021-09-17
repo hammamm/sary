@@ -27,11 +27,9 @@ enum Environment {
     private var url: String {
         switch self {
         case .production:
-//            return "https://ezhal.com/ezhal_shops_test/public/api/sales/v1/"
-            return "https://ezhal.com/ezhal_shops/public/api/sales/v1/"
+            return "https://staging.sary.co/api/v2.5.1/baskets/76097/"
         case .development:
-//            return "https://ezhal.com/ezhal_shops_test/public/api/sales/v1/"
-            return "https://ezhal.com/ezhal_shops/public/api/sales/v1/"
+            return "https://staging.sary.co/api/v2.5.1/baskets/76097/"
         }
     }
 }

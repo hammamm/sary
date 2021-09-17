@@ -21,9 +21,12 @@ class HomeView: BaseView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configuration()
+        viewModel.getData()
     }
 
     private func configuration() {
+        tableView.register(UINib(nibName: BannerTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: BannerTableViewCell.identifier)
         viewModel.loading.bind(onNext: self.loading(_:)).disposed(by: disposeBag)
         viewModel.error.observe(on: MainScheduler.instance).subscribe { error in
             self.error = error

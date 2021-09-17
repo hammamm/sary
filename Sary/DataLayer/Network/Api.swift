@@ -35,7 +35,7 @@ class MyApi {
                     let node = node != nil ? dictionary?[node ?? ""] : dictionary
                     let json = try JSONSerialization.data(withJSONObject: node as Any, options: .prettyPrinted)
                     let object = try JSONDecoder().decode(T.self, from: json)
-                    completion(.success(object as! Model<T>))
+                    completion(.success(object))
                 } catch let error {
                     // return decoding failed
                     logNetwork("❌ Error in Mapping\n\(url)\nError:\n\(error)")

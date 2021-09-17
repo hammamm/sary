@@ -29,7 +29,7 @@ struct Banner: Codable {
 
 // MARK: - Banner APIS
 extension Banner{
-    static func getList(_ completion: @escaping Response<[Banner]>) {
+    static func getList(_ completion: @escaping Response<Model<[Banner]>>) {
         _getList() { (result) in
             switch result {
                 case .success(let user):
@@ -40,7 +40,7 @@ extension Banner{
         }
     }
     
-    private static func _getList(_ completion: @escaping Response<[Banner]>) {
+    private static func _getList(_ completion: @escaping Response<Model<[Banner]>>) {
         Router.BannerRouter.getList.request(completion: completion)
     }
 }

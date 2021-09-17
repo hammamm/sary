@@ -21,35 +21,18 @@ extension MyEndpoint {
         var header: [String: String] = [:]
         var allHeaders = headers ?? [String: String]()
         header["language"] = (Authenticator.shared.currentLanguage?.contains("en") ?? false) ? "en" : "ar"
-//        header["Content-Type"] = "application/json"
-//        if let token = Authenticator.shared.token{
-//            header["Authorization"] = "Bearer " + token
-//        }
-        //        header["App-Version"] = ""
-        //        header["Accept-Language"] = "en-SA;q=1, ar-SA;q=0.9"
-        //        header["User-Agent"] = "userAgent"
-        //        header["Authorization"] = ""
-        //        header["Accept"] = "application/json"
+        header["Authorization"] = "token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ODg2NiwidXNlcl9waG9uZSI6Ijk2NjU2NDk4OTI1MCJ9.VYE28vtnMRLmwBISgvvnhOmPuGueW49ogOhXm5ZqsGU"
+        header["App-Version"] = "3.1.1.0.0"
+        header["Device-Type"] = "android"
+                header["Accept-Language"] = "ar"
         allHeaders += header
         return allHeaders
     }
     
     /// Default parameters for your endpoint
     var defaultParameters: [String: Any] {
-        var params: [String: Any] = [:]
+        let params: [String: Any] = [:]
         var allParameters = parameters ?? [String: Any]()
-//        params["lang"] = "lang".localized
-        if let token = Authenticator.shared.token{
-            params["token"] = token
-        }
-        //        params["device_type"] = "IOS"
-        //        params["API-KEY"] = Keys.apiKey
-        //        params["device_token"] = "12345"
-        //        params["TRANSACTION_ID"] = ""
-        //        params["APP_ID"] = ""
-        //        params["VERSION"] = ""
-        //        params["DEVICE_ID"] = ""
-        //        params["REQUEST_DATE"] = ""
         allParameters += params
         return allParameters
     }
