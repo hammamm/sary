@@ -54,6 +54,11 @@
 		4B6A3B4126F4853B003071A4 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A3B3E26F4853B003071A4 /* BaseViewModel.swift */; };
 		4B6A3B4326F48754003071A4 /* UIViewContoller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A3B4226F48754003071A4 /* UIViewContoller+Extension.swift */; };
 		4B6A3B4526F4880F003071A4 /* UIAlertAction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A3B4426F4880F003071A4 /* UIAlertAction+Extension.swift */; };
+		4B6A3B4926F49D11003071A4 /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A3B4726F49D11003071A4 /* BannerTableViewCell.swift */; };
+		4B6A3B4A26F49D11003071A4 /* BannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6A3B4826F49D11003071A4 /* BannerTableViewCell.xib */; };
+		4B6A3B4E26F49FF5003071A4 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A3B4C26F49FF5003071A4 /* ImageCollectionViewCell.swift */; };
+		4B6A3B4F26F49FF5003071A4 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6A3B4D26F49FF5003071A4 /* ImageCollectionViewCell.xib */; };
+		4B6A3B5326F4A243003071A4 /* UIImageView+Extesnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A3B5226F4A243003071A4 /* UIImageView+Extesnion.swift */; };
 		D44F5538629756A5CA727633 /* Pods_Sary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D658C2C7E03F4565C7E771 /* Pods_Sary.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +114,11 @@
 		4B6A3B3E26F4853B003071A4 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		4B6A3B4226F48754003071A4 /* UIViewContoller+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+Extension.swift"; sourceTree = "<group>"; };
 		4B6A3B4426F4880F003071A4 /* UIAlertAction+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+Extension.swift"; sourceTree = "<group>"; };
+		4B6A3B4726F49D11003071A4 /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
+		4B6A3B4826F49D11003071A4 /* BannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerTableViewCell.xib; sourceTree = "<group>"; };
+		4B6A3B4C26F49FF5003071A4 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4B6A3B4D26F49FF5003071A4 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		4B6A3B5226F4A243003071A4 /* UIImageView+Extesnion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extesnion.swift"; sourceTree = "<group>"; };
 		B79813F9B61D68BE2FBDBD20 /* Pods-Sary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sary.debug.xcconfig"; path = "Target Support Files/Pods-Sary/Pods-Sary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				4B6A3B2826F481BC003071A4 /* UIColor+Extension.swift */,
+				4B6A3B5226F4A243003071A4 /* UIImageView+Extesnion.swift */,
 				4B6A3B2426F4777A003071A4 /* UIFont+Extension.swift */,
 				4B6A3B2026F472CB003071A4 /* UiTextField+Extention.swift */,
 				4B6A3B2126F472CB003071A4 /* UITextView+Extension.swift */,
@@ -289,6 +300,7 @@
 		4B6A3B2A26F4837B003071A4 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				4B6A3B4626F49CEF003071A4 /* bannaerCell */,
 				4B6A3B2B26F4839B003071A4 /* HomeView.swift */,
 				4B6A3B2C26F4839B003071A4 /* HomeView.xib */,
 				4B6A3B2F26F483AA003071A4 /* HomeViewModel.swift */,
@@ -323,6 +335,25 @@
 				4B6A3B3C26F4853A003071A4 /* BaseViewProtocol.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		4B6A3B4626F49CEF003071A4 /* bannaerCell */ = {
+			isa = PBXGroup;
+			children = (
+				4B6A3B4B26F49FBE003071A4 /* imageCell */,
+				4B6A3B4726F49D11003071A4 /* BannerTableViewCell.swift */,
+				4B6A3B4826F49D11003071A4 /* BannerTableViewCell.xib */,
+			);
+			path = bannaerCell;
+			sourceTree = "<group>";
+		};
+		4B6A3B4B26F49FBE003071A4 /* imageCell */ = {
+			isa = PBXGroup;
+			children = (
+				4B6A3B4C26F49FF5003071A4 /* ImageCollectionViewCell.swift */,
+				4B6A3B4D26F49FF5003071A4 /* ImageCollectionViewCell.xib */,
+			);
+			path = imageCell;
 			sourceTree = "<group>";
 		};
 		6A79F0C808ED3E98792C7002 /* Pods */ = {
@@ -404,8 +435,10 @@
 				4B6A3AC426F1C0F4003071A4 /* LaunchScreen.storyboard in Resources */,
 				4B6A3B3A26F483FB003071A4 /* ProfileView.xib in Resources */,
 				4B6A3B3526F483DD003071A4 /* OrderView.xib in Resources */,
+				4B6A3B4F26F49FF5003071A4 /* ImageCollectionViewCell.xib in Resources */,
 				4B6A3AC126F1C0F4003071A4 /* Assets.xcassets in Resources */,
 				4B6A3B2E26F4839C003071A4 /* HomeView.xib in Resources */,
+				4B6A3B4A26F49D11003071A4 /* BannerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +507,8 @@
 				4B6A3B1B26F46EF6003071A4 /* Keys+UserDefaults.swift in Sources */,
 				4B6A3B2326F472CB003071A4 /* UITextView+Extension.swift in Sources */,
 				4B6A3B1726F46DE5003071A4 /* String+Extension.swift in Sources */,
+				4B6A3B4926F49D11003071A4 /* BannerTableViewCell.swift in Sources */,
+				4B6A3B5326F4A243003071A4 /* UIImageView+Extesnion.swift in Sources */,
 				4B6A3AFC26F280BC003071A4 /* Keys.swift in Sources */,
 				4B6A3AE426F27CC3003071A4 /* Router.swift in Sources */,
 				4B6A3B2526F4777A003071A4 /* UIFont+Extension.swift in Sources */,
@@ -491,6 +526,7 @@
 				4B6A3B0526F28C85003071A4 /* Codable+Enum.swift in Sources */,
 				4B6A3AF126F27CE0003071A4 /* Environment.swift in Sources */,
 				4B6A3ADC26F27940003071A4 /* Navigatore.swift in Sources */,
+				4B6A3B4E26F49FF5003071A4 /* ImageCollectionViewCell.swift in Sources */,
 				4B6A3AEE26F27CE0003071A4 /* HTTPMethod.swift in Sources */,
 				4B6A3AF626F27E0B003071A4 /* Model+Banner.swift in Sources */,
 				4B6A3B4326F48754003071A4 /* UIViewContoller+Extension.swift in Sources */,

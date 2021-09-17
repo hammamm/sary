@@ -7,6 +7,8 @@
 
 import UIKit
 import SwiftMessages
+import RxSwift
+import RxCocoa
 
 // MARK:- BASEVIEW
 class BaseView: UIViewController {
@@ -15,6 +17,7 @@ class BaseView: UIViewController {
     }
     
     let interactor = Interactor()
+    
     var error: String? {
         didSet{
             alert(.error, title: nil, body: error)

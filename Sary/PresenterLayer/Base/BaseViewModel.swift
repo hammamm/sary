@@ -6,7 +6,11 @@
 //
 
 import UIKit
-import CoreLocation
+import RxSwift
+import RxCocoa
 
-class BaseViewModel: NSObject {
+class BaseViewModel {
+    public var data : PublishSubject<[Any?]> = PublishSubject()
+    public let loading: PublishSubject<Bool> = PublishSubject()
+    public let error : PublishSubject<String> = PublishSubject()
 }
