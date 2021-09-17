@@ -9,11 +9,18 @@ import Foundation
 
 extension Router{
     enum BannerRouter: MyEndpoint {
+                
         case getList
         
         var serviceUrl: String{
             switch self {
                 case .getList: return Keys.Api.getBannerList
+            }
+        }
+        
+        var parameters: [String : Any]?{
+            switch self {
+                case .getList: return nil
             }
         }
     }

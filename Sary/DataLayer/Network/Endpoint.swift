@@ -23,11 +23,9 @@ protocol Endpoint {
     /// Http method as specified by the server
     var method: HTTPMethod { get }
     
-    /// Determind if you want to print the response in the consol or not
+    /// Determine if you want to print the response in the console or not
     var isPrintable: Bool { get }
-    
-    var images: [(UIImage, String)]? { get }
-        
+            
     /// Calling the API for the defined router endpoint. the default implementation should not be ignored
     func request<T: Codable>(completion: @escaping Response<T>)
 }

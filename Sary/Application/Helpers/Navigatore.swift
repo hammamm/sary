@@ -7,20 +7,12 @@
 
 import UIKit
 
-//typealias PanView = UIViewController & PanModalPresentable
-
 enum NavigatoreView {
     case register
     
-//    var panView: (UIViewController & PanModalPresentable)?{
-//        switch self {
-//            case .register: return RegisterView()
-//        }
-//    }
-//
     var view: UIViewController{
         switch self {
-            case .register: return RegisterView()
+            case .register: return UIViewController()
         }
     }
 }
@@ -29,7 +21,6 @@ enum NavigatoreType {
     case push(animated: Bool)
     case present(animated: Bool, presentationStyle: UIModalPresentationStyle, transitionStyle: UIModalTransitionStyle)
     case window
-    case pan
 }
 
 extension UIViewController{
@@ -44,13 +35,7 @@ extension UIViewController{
                 present(view, animated: animated, completion: nil)
             case .window:
                 if let appDelegate = UIApplication.shared.delegate as? AppDelegate{
-                    appDelegate.setTheAppRoot()
-                }
-            case .pan:
-                if let view = controller.panView{
-                    self.presentPanModal(view)
-                }else{
-                    present(controller.view, animated: true, completion: nil)
+//                    appDelegate.setTheAppRoot()
                 }
         }
     }

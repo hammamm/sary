@@ -8,6 +8,7 @@ pod 'Alamofire'
 pod 'IQKeyboardManager'
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'SwiftMessages'
 
   # Pods for Sary
 

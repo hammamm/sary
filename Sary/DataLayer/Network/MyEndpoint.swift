@@ -13,7 +13,7 @@ extension MyEndpoint {
     
     /// Base url with serviceUrl
     var url: String {
-        return serviceUrl.hasPrefix("http") ? serviceUrl : (Environment.baseURL + serviceUrl)
+        serviceUrl.hasPrefix("http") ? serviceUrl : (Environment.baseURL + serviceUrl)
     }
     
     /// Base headers for every request
@@ -58,24 +58,20 @@ extension MyEndpoint {
     /// can override this `headers` in your endpoint router if you need, and if you want
     /// a new headers without `defaultHeaders` you can override `defaultHeaders` in your router
     var headers: [String: String]? {
-        return nil
+        nil
     }
     
     /// Default method for your endpoints, override it in your endpoint router if need it
     var method: HTTPMethod {
-        return .get
+        .get
     }
-    
-    var images: [(UIImage, String)]?{
-        return nil
-    }
-    
+        
     var isPrintable: Bool {
-        return true
+        true
     }
     
     var node: String? {
-        return nil
+        nil
     }
 }
 
@@ -93,7 +89,6 @@ extension MyEndpoint {
                       parameters: defaultParameters,
                       node: node,
                       isPrintable: isPrintable,
-                      images: images,
                       completion: completion)
     }
 }
